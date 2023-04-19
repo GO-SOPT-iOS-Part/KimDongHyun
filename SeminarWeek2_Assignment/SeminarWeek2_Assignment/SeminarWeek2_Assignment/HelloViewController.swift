@@ -12,25 +12,29 @@ import SnapKit
 
 final class HelloViewController: UIViewController {
 
-    private lazy var email = "skydh1214@naver.com"
-
-    private lazy var tvingImageView: UIImageView = {
+    
+    var email = "skydh1214@naver.com" {
+        didSet {
+            emailLabel.text = email + "님"
+        }
+    }
+    
+    private let tvingImageView: UIImageView = {
         let welcomeImageView = UIImageView()
         welcomeImageView.backgroundColor = .black
         welcomeImageView.image = UIImage(named: "tvingimage")
         return welcomeImageView
     }()
     
-    lazy var emailLabel: UILabel = {
+   lazy var emailLabel: UILabel = {
         let label = UILabel()
-        label.text = "\(String(describing: email))님"
         label.textAlignment = .center
         label.font = UIFont(name:"Pretendard-Bold", size: 23)
         label.textColor = .tvingGray1
         return label
     }()
     
-    private lazy var welcomeLabel: UILabel = {
+    private let welcomeLabel: UILabel = {
         let label = UILabel()
         label.text = "반가워요!"
         label.textAlignment = .center
@@ -85,17 +89,14 @@ extension HelloViewController {
         }
         
         goMainButton.snp.makeConstraints { make in
-            make.top.equalTo(emailLabel.snp.bottom).offset(284)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(335)
+            make.top.equalTo(emailLabel.snp.bottom).offset(384)
+            make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(52)
         }
     }
     
     func backToStartViewController() {
-        let startViewController = StartViewController()
-       startViewController.modalPresentationStyle = .fullScreen
-        self.present(startViewController, animated: true)
+        dismiss(animated: true)
     }
     
     @objc

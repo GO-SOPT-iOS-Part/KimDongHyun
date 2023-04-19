@@ -21,27 +21,27 @@ final class StartViewController: UIViewController {
         return button
     }()
     
-    lazy var cancleButton1: UIButton = {
+    private lazy var cancelButton1: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "cancle.svg"), for: .normal)
         button.isHidden = true
-        button.addTarget(self, action: #selector(cancleButton1Tapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(cancelButton1Tapped), for: .touchUpInside)
         return button
     }()
     
-    lazy var cancleButton2: UIButton = {
+    private lazy var cancelButton2: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "cancle.svg"), for: .normal)
         button.isHidden = true
-        button.addTarget(self, action: #selector(cancleButton2Tapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(cancelButton2Tapped), for: .touchUpInside)
         return button
     }()
     
-    lazy var eyeslashButton: UIButton = {
+    private lazy var eyeSlashButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "eye-slash.pdf"), for: .normal)
         button.isHidden = true
-        button.addTarget(self, action: #selector(eyeslashButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(eyeslashButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -76,7 +76,7 @@ final class StartViewController: UIViewController {
         button.layer.cornerRadius = 3
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor(named: "gray4")?.cgColor
-        button.self.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -92,7 +92,7 @@ final class StartViewController: UIViewController {
         return button
     }()
     
-    private lazy var idTextField: UITextField = {
+    private let idTextField: UITextField = {
         let textField = UITextField()
         textField.textColor = .tvingGray2
         textField.backgroundColor = .tivingGray4
@@ -107,7 +107,7 @@ final class StartViewController: UIViewController {
         return textField
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    private let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.textContentType = .newPassword
         textField.isSecureTextEntry = true
@@ -168,8 +168,8 @@ extension StartViewController {
     private func setlayout() {
         view.addSubviews(backButton,loginLabel,idTextField,passwordTextField,loginButton,idFindButton,
                          passwordFindButton,idtextLabel,nicknameButton,midLabel)
-        idTextField.addSubview(cancleButton1)
-        passwordTextField.addSubviews(eyeslashButton,cancleButton2)
+        idTextField.addSubview(cancelButton1)
+        passwordTextField.addSubviews(eyeSlashButton,cancelButton2)
         
         backButton.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(65)
@@ -242,66 +242,65 @@ extension StartViewController {
             
         }
         
-        eyeslashButton.snp.makeConstraints { make in
+        eyeSlashButton.snp.makeConstraints { make in
             make.centerY.equalTo(passwordTextField.snp.centerY)
             make.trailing.equalToSuperview().inset(20)
             make.width.equalTo(20)
             make.height.equalTo(20)
         }
         
-        cancleButton1.snp.makeConstraints { make in
+        cancelButton1.snp.makeConstraints { make in
             make.centerY.equalTo(idTextField.snp.centerY)
             make.trailing.equalToSuperview().inset(20)
             make.width.equalTo(20)
             make.height.equalTo(20)
         }
         
-        cancleButton2.snp.makeConstraints { make in
+        cancelButton2.snp.makeConstraints { make in
             make.centerY.equalTo(passwordTextField.snp.centerY)
-            make.trailing.equalTo(eyeslashButton.snp.leading).offset(-16)
+            make.trailing.equalTo(eyeSlashButton.snp.leading).offset(-16)
             make.width.equalTo(20)
             make.height.equalTo(20)
         }
     }
     
     func presentToHelloViewController() {
-        let text = idTextField.text     // HelloViewController에 전달할 내용임. idTextField.text를 새로 만든 변수 text에 넣어준다.
-        let helloViewController = HelloViewController()
-        helloViewController.emailLabel.text = text  //  helloViewController.emailLabel.text의 내용에 text를 넣는다.
-        helloViewController.modalPresentationStyle = .fullScreen
-        self.present(helloViewController, animated: true)
-    }
+        guard let text = idTextField.text else { return }     
+            let helloViewController = HelloViewController()
+            helloViewController.email = text  
+            helloViewController.modalPresentationStyle = .fullScreen
+            self.present(helloViewController, animated: true)
+        }
 
 
     
     // MARK: - Button 관련
     @objc
-    func cancleButton1Tapped() {
+    func cancelButton1Tapped() {
         
         idTextField.text = ""
     }
     
     @objc
-    func cancleButton2Tapped() {
+    func cancelButton2Tapped() {
         passwordTextField.text = ""
     }
     
     @objc
-    func eyeslashButtonTapped() {
-        self.eyeslashButton.isSelected = !self.eyeslashButton.isSelected
-        passwordTextField.isSecureTextEntry = self.eyeslashButton.isSelected
+    func eyeslashButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        passwordTextField.isSecureTextEntry = sender.isSelected
     }
+//    @objc
+//    func eyeslashButtonTapped() {
+//        self.eyeslashButton.isSelected = !self.eyeslashButton.isSelected
+//        passwordTextField.isSecureTextEntry = self.eyeslashButton.isSelected
+//    }
     
     @objc
     func loginButtonTapped() {
         presentToHelloViewController()
     }
-    
-    //    일단 이거 남겨두고.. 다시 돌릴 내영임
-//    @objc
-//    func nicknameButtonTapped() {
-//        presentToNicknamViewController()
-//    }
     
     @objc
     func nicknameButtonTapped() {
@@ -324,29 +323,29 @@ extension StartViewController: UITextFieldDelegate {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(named: "gray2")?.cgColor
         if textField == idTextField{
-            self.cancleButton1.isHidden = idTextField.isEmpty
+            self.cancelButton1.isHidden = idTextField.isEmpty
         }
         else {
-            self.cancleButton2.isHidden = passwordTextField.isEmpty
-            self.eyeslashButton.isHidden = passwordTextField.isEmpty
+            self.cancelButton2.isHidden = passwordTextField.isEmpty
+            self.eyeSlashButton.isHidden = passwordTextField.isEmpty
         }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(named: "gray4")?.cgColor
-        self.cancleButton1.isHidden = true
-        self.eyeslashButton.isHidden = true
-        self.cancleButton2.isHidden = true
+        self.cancelButton1.isHidden = true
+        self.eyeSlashButton.isHidden = true
+        self.cancelButton2.isHidden = true
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField == idTextField{
-            self.cancleButton1.isHidden = idTextField.isEmpty
+            self.cancelButton1.isHidden = idTextField.isEmpty
         }
         else {
-            self.cancleButton2.isHidden = passwordTextField.isEmpty
-            self.eyeslashButton.isHidden = passwordTextField.isEmpty
+            self.cancelButton2.isHidden = passwordTextField.isEmpty
+            self.eyeSlashButton.isHidden = passwordTextField.isEmpty
         }
         guard let id = idTextField.text else { return } // 한번 이메일이 있나?? 검증하고 유효한 이메일 형식인지 체크할께요~!
         self.loginButton.isEnabled = !idTextField.isEmpty && !passwordTextField.isEmpty && id.isValidEmail()

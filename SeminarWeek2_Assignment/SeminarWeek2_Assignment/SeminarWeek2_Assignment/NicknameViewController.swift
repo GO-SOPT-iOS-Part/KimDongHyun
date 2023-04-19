@@ -12,7 +12,7 @@ import SnapKit
 final class NicknamViewController: UIViewController {
     
 
-    private lazy var nicknameLabel: UILabel = {
+    private let nicknameLabel: UILabel = {
         let label = UILabel()
         label.text = "닉네임을 입력해주세요"
         label.textColor = .tvingBlack
@@ -20,7 +20,7 @@ final class NicknamViewController: UIViewController {
         return label
     }()
     
-    private lazy var nicknameTextField: UITextField = {
+    private let nicknameTextField: UITextField = {
         let textField = UITextField()
         textField.textColor = .tivingGray4
         textField.backgroundColor = .tvingGray2
@@ -51,6 +51,7 @@ final class NicknamViewController: UIViewController {
         super.viewDidLoad()
                 setStyle()
                 setLayout()
+                setView()
     }
 }
 
@@ -58,6 +59,7 @@ extension NicknamViewController {
     
     private func setView() {
         view.layer.cornerRadius = 20
+        view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
     private func setStyle() {

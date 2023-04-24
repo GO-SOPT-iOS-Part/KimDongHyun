@@ -1,69 +1,63 @@
 //
-//  StartViewController.swift
+//  StartView.swift
 //  SeminarWeek2_Assignment
 //
-//  Created by 김동현 on 2023/04/11.
+//  Created by 김동현 on 2023/04/24.
 //
 
 import UIKit
 
 import SnapKit
+import Then
 
-
-final class StartViewController: UIViewController {
+final class StartView: UIView {
     
-    // MARK: - UI 속성 정리
+    lazy var backButton = UIButton().then {
+        $0.setImage(UIImage.Image.backButton, for: .normal)
+        $0.isSelected = true
+    }
     
-    private lazy var backButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "btn_before.svg"), for: .normal)
-        button.isSelected = true
-        return button
-    }()
-    
-    private lazy var cancelButton1: UIButton = {
+    lazy var textFieldClearButton1: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "cancle.svg"), for: .normal)
+        button.setImage(UIImage.Image.cancle, for: .normal)
         button.isHidden = true
-        button.addTarget(self, action: #selector(cancelButton1Tapped), for: .touchUpInside)
         return button
     }()
     
-    private lazy var cancelButton2: UIButton = {
+    lazy var textFieldClearButton2: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "cancle.svg"), for: .normal)
+        button.setImage(UIImage.Image.cancle, for: .normal)
         button.isHidden = true
-        button.addTarget(self, action: #selector(cancelButton2Tapped), for: .touchUpInside)
         return button
     }()
     
-    private lazy var eyeSlashButton: UIButton = {
+    lazy var textFieldHideButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "eye-slash.pdf"), for: .normal)
+        button.setImage(UIImage.Image.textFieldClear, for: .normal)
         button.isHidden = true
-        button.addTarget(self, action: #selector(eyeslashButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
-    private lazy var idFindButton: UIButton = {
+    lazy var idFindButton: UIButton = {
         let button = UIButton()
         button.setTitle("아이디 찾기", for: .normal)
-        button.titleLabel?.font = UIFont(name:"Pretendard-SemiBold", size: 14)
+        button.titleLabel?.font = .tvingSemiBold(ofSize: 14)
         button.titleLabel?.textColor = .tvingGray2
         button.titleLabel?.textAlignment = .center
         return button
     }()
     
-    private lazy var passwordFindButton: UIButton = {
+    lazy var passwordFindButton: UIButton = {
         let button = UIButton()
         button.setTitle("비밀번호 찾기", for: .normal)
-        button.titleLabel?.font = UIFont(name:"Pretendard-SemiBold", size: 14)
+        button.titleLabel?.font = .tvingSemiBold(ofSize: 14)
         button.titleLabel?.textColor = .tvingGray2
         button.titleLabel?.textAlignment = .center
         return button
     }()
     
-    private lazy var loginButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.tvingGray2, for: .disabled)
@@ -71,33 +65,31 @@ final class StartViewController: UIViewController {
         button.setBackgroundColor(.tvingBlack, for: .disabled)
         button.setBackgroundColor(.tvingRed, for: .normal)
         button.isEnabled = false
-        button.titleLabel?.font = UIFont(name:"Pretendard-SemiBold", size: 14)
+        button.titleLabel?.font = .tvingSemiBold(ofSize: 14)
         button.titleLabel?.textAlignment = .center
         button.layer.cornerRadius = 3
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor(named: "gray4")?.cgColor
-        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
     
-    private lazy var nicknameButton: UIButton = {
+    lazy var nicknameButton: UIButton = {
         let button = UIButton()
         button.setTitle("닉네임 만들러가기", for: .normal)
         button.setUnderline()
         button.backgroundColor = .black
-        button.titleLabel?.font = UIFont(name:"Pretendard-Regular", size: 14)
+        button.titleLabel?.font = .tvingRegular(ofSize: 14)
         button.titleLabel?.textColor = .tvingGray2
         button.titleLabel?.textAlignment = .center
-        button.addTarget(self, action: #selector(nicknameButtonTapped), for: .touchUpInside)
         return button
     }()
     
-    private let idTextField: UITextField = {
+    let idTextField: UITextField = {
         let textField = UITextField()
         textField.textColor = .tvingGray2
         textField.backgroundColor = .tivingGray4
         textField.layer.cornerRadius = 3
-        textField.font = UIFont(name:"Pretendard-SemiBold", size: 15)
+        textField.font = .tvingSemiBold(ofSize: 15)
         textField.setLeftPadding(amount: 22)
         textField.setRightPadding(amount: 90)
         textField.attributedPlaceholder = NSAttributedString(
@@ -107,14 +99,14 @@ final class StartViewController: UIViewController {
         return textField
     }()
     
-    private let passwordTextField: UITextField = {
+    let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.textContentType = .newPassword
         textField.isSecureTextEntry = true
         textField.textColor = .tvingGray2
         textField.backgroundColor = .tivingGray4
         textField.layer.cornerRadius = 3
-        textField.font = UIFont(name:"Pretendard-SemiBold", size: 15)
+        textField.font = .tvingSemiBold(ofSize: 15)
         textField.setLeftPadding(amount: 22)
         textField.setRightPadding(amount: 90)
         textField.attributedPlaceholder = NSAttributedString(
@@ -123,25 +115,25 @@ final class StartViewController: UIViewController {
         return textField
     }()
     
-    private let loginLabel: UILabel = {
+    let loginLabel: UILabel = {
         let label = UILabel()
         label.text = "TVING ID 로그인"
         label.textAlignment = .center
         label.textColor = .tvingGray1
-        label.font = UIFont(name:"Pretendard-Medium", size: 23)
+        label.font = .tvingMedium(ofSize: 23)
         return label
     }()
     
-    private let idtextLabel: UILabel = {
+    let idtextLabel: UILabel = {
         let label = UILabel()
         label.text = "아직 계정이 없으신가요?"
         label.textAlignment = .center
-        label.font = UIFont(name:"Pretendard-SemiBold", size: 14)
+        label.font = .tvingSemiBold(ofSize: 14)
         label.textColor = .tvingGray3
         return label
     }()
     
-    private let midLabel: UILabel = {
+    let midLabel: UILabel = {
         let label = UILabel()
         label.text = "|"
         label.textAlignment = .center
@@ -149,27 +141,26 @@ final class StartViewController: UIViewController {
         return label
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         setstyle()
         setlayout()
-        
-        self.idTextField.delegate = self
-        self.passwordTextField.delegate = self
     }
     
-}
-
-// MARK: - StartViewController 관련 속성 (배경 및 레이아웃)
-extension StartViewController {
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("StartView Error!")
+    }
+    
     private func setstyle() {
-        view.backgroundColor = .black
+        self.backgroundColor = .black
     }
     private func setlayout() {
-        view.addSubviews(backButton,loginLabel,idTextField,passwordTextField,loginButton,idFindButton,
+        self.addSubviews(backButton,loginLabel,idTextField,passwordTextField,loginButton,idFindButton,
                          passwordFindButton,idtextLabel,nicknameButton,midLabel)
-        idTextField.addSubview(cancelButton1)
-        passwordTextField.addSubviews(eyeSlashButton,cancelButton2)
+        idTextField.addSubview(textFieldClearButton1)
+        passwordTextField.addSubviews(textFieldHideButton,textFieldClearButton2)
         
         backButton.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(65)
@@ -214,8 +205,6 @@ extension StartViewController {
         midLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(378)
             make.centerX.equalToSuperview()
-//            make.width.equalTo(3)
-//            make.height.equalTo(12)
         }
         
         passwordFindButton.snp.makeConstraints { make in
@@ -239,133 +228,27 @@ extension StartViewController {
             make.trailing.equalToSuperview().inset(50)
             make.width.equalTo(128)
             make.height.equalTo(22)
-            
         }
         
-        eyeSlashButton.snp.makeConstraints { make in
+        textFieldHideButton.snp.makeConstraints { make in
             make.centerY.equalTo(passwordTextField.snp.centerY)
             make.trailing.equalToSuperview().inset(20)
             make.width.equalTo(20)
             make.height.equalTo(20)
         }
         
-        cancelButton1.snp.makeConstraints { make in
+        textFieldClearButton1.snp.makeConstraints { make in
             make.centerY.equalTo(idTextField.snp.centerY)
             make.trailing.equalToSuperview().inset(20)
             make.width.equalTo(20)
             make.height.equalTo(20)
         }
         
-        cancelButton2.snp.makeConstraints { make in
+        textFieldClearButton2.snp.makeConstraints { make in
             make.centerY.equalTo(passwordTextField.snp.centerY)
-            make.trailing.equalTo(eyeSlashButton.snp.leading).offset(-16)
+            make.trailing.equalTo(textFieldHideButton.snp.leading).offset(-16)
             make.width.equalTo(20)
             make.height.equalTo(20)
         }
     }
-    
-    func presentToHelloViewController() {
-        guard let text = idTextField.text else { return }     
-            let helloViewController = HelloViewController()
-            helloViewController.email = text  
-            helloViewController.modalPresentationStyle = .fullScreen
-            self.present(helloViewController, animated: true)
-        }
-
-
-    
-    // MARK: - Button 관련
-    @objc
-    func cancelButton1Tapped() {
-        
-        idTextField.text = ""
-    }
-    
-    @objc
-    func cancelButton2Tapped() {
-        passwordTextField.text = ""
-    }
-    
-    @objc
-    func eyeslashButtonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        passwordTextField.isSecureTextEntry = sender.isSelected
-    }
-//    @objc
-//    func eyeslashButtonTapped() {
-//        self.eyeslashButton.isSelected = !self.eyeslashButton.isSelected
-//        passwordTextField.isSecureTextEntry = self.eyeslashButton.isSelected
-//    }
-    
-    @objc
-    func loginButtonTapped() {
-        presentToHelloViewController()
-    }
-    
-    @objc
-    func nicknameButtonTapped() {
-        let modal = NicknamViewController()
-        if let sheet = modal.sheetPresentationController{
-            sheet.detents = [.medium()]
-            sheet.prefersGrabberVisible = true
-            //sheet.delegate = self
-        }
-       self.present(modal, animated: true)
-    }
-    
 }
-
-
-
-// MARK: - Extension 관련
-extension StartViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor(named: "gray2")?.cgColor
-        if textField == idTextField{
-            self.cancelButton1.isHidden = idTextField.isEmpty
-        }
-        else {
-            self.cancelButton2.isHidden = passwordTextField.isEmpty
-            self.eyeSlashButton.isHidden = passwordTextField.isEmpty
-        }
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor(named: "gray4")?.cgColor
-        self.cancelButton1.isHidden = true
-        self.eyeSlashButton.isHidden = true
-        self.cancelButton2.isHidden = true
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField == idTextField{
-            self.cancelButton1.isHidden = idTextField.isEmpty
-        }
-        else {
-            self.cancelButton2.isHidden = passwordTextField.isEmpty
-            self.eyeSlashButton.isHidden = passwordTextField.isEmpty
-        }
-        guard let id = idTextField.text else { return } // 한번 이메일이 있나?? 검증하고 유효한 이메일 형식인지 체크할께요~!
-        self.loginButton.isEnabled = !idTextField.isEmpty && !passwordTextField.isEmpty && id.isValidEmail()
-    }
-}
-
-//닉네임때 쓸 코드입니다
-//extension StartViewController: EmailDelegate{
-//    func emailDelegate(email: String){
-////        idTextField.text = email
-//    }
-//}
-
-
-
-
-
-
-
-//name: Pretendard-Regular
-//name: Pretendard-Medium
-//name: Pretendard-SemiBold
-//name: Pretendard-Bold

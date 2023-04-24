@@ -9,14 +9,14 @@ import UIKit
 import SnapKit
 
 
-final class NicknamViewController: UIViewController {
+final class NicknamViewController: BaseViewController {
     
-
+    
     private let nicknameLabel: UILabel = {
         let label = UILabel()
         label.text = "닉네임을 입력해주세요"
         label.textColor = .tvingBlack
-        label.font = UIFont(name: "Pretendard-Medium", size: 23)
+        label.font = .tvingMedium(ofSize: 23)
         return label
     }()
     
@@ -25,13 +25,13 @@ final class NicknamViewController: UIViewController {
         textField.textColor = .tivingGray4
         textField.backgroundColor = .tvingGray2
         textField.layer.cornerRadius = 3
-        textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
+        textField.font = .tvingSemiBold(ofSize: 14)
         textField.setLeftPadding(amount: 22)
         textField.attributedPlaceholder = NSAttributedString(
             string: "아요왕이 될 김동현",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.tvingGray1]
         )
-
+        
         return textField
     }()
     
@@ -39,34 +39,31 @@ final class NicknamViewController: UIViewController {
         let button = UIButton()
         button.setTitle("저장하기", for: .normal)
         button.backgroundColor = .tvingRed
-        button.titleLabel?.font = UIFont(name:"Pretendard-SemiBold", size: 14)
+        button.titleLabel?.font = .tvingSemiBold(ofSize: 14)
         button.titleLabel?.textColor = .tvingWhite
         button.titleLabel?.textAlignment = .center
         button.layer.cornerRadius = 12
         button.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-                setStyle()
-                setLayout()
-                setView()
+        setStyle()
+        setLayout()
+        setView()
+        
     }
-}
-
-extension NicknamViewController {
-    
-    private func setView() {
+    func setView() {
         view.layer.cornerRadius = 20
         view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
-    private func setStyle() {
+    override func setStyle() {          // override 키워드를 붙여주어야 함.
         view.backgroundColor = .tvingWhite
     }
     
-    private func setLayout() {
+    override func setLayout() {
         view.addSubviews(nicknameLabel,nicknameTextField,saveButton)
         
         nicknameLabel.snp.makeConstraints { make in
@@ -90,15 +87,19 @@ extension NicknamViewController {
             make.height.equalTo(52)
         }
     }
-    
-    func presentToStartViewController() {
-        let startViewController = StartViewController()
-        startViewController.modalPresentationStyle = .fullScreen
-        self.present(startViewController, animated: true)
-    }
-    
-    @objc
-    func saveButtonTapped() {
-        self.dismiss(animated: true)
-    }
 }
+    extension NicknamViewController {
+    
+        func presentToStartViewController() {
+            let startViewController = StartViewController()
+            startViewController.modalPresentationStyle = .fullScreen
+            self.present(startViewController, animated: true)
+        }
+        
+        @objc
+        func saveButtonTapped() {
+            self.dismiss(animated: true)
+        }
+    }
+    
+

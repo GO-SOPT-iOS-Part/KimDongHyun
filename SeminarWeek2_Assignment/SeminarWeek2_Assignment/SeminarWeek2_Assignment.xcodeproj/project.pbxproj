@@ -23,6 +23,12 @@
 		D36D321129E57ABD003552E8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D321029E57ABD003552E8 /* StartViewController.swift */; };
 		D36D321429E57B23003552E8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D36D321329E57B23003552E8 /* SnapKit */; };
 		D374B96329F68DFF000FD88C /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D374B96229F68DFF000FD88C /* Then */; };
+		D374B97029F83505000FD88C /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374B96F29F83505000FD88C /* ProfileTableViewCell.swift */; };
+		D374B97729F8F63C000FD88C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374B97629F8F63C000FD88C /* ProfileViewController.swift */; };
+		D374B97E29F93AB0000FD88C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374B97D29F93AB0000FD88C /* ProfileView.swift */; };
+		D374B98029F94D4D000FD88C /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374B97F29F94D4D000FD88C /* SettingTableViewCell.swift */; };
+		D374B98229F94F02000FD88C /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374B98129F94F02000FD88C /* SettingTableViewController.swift */; };
+		D374B98B29F992CD000FD88C /* BasicSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374B98A29F992CD000FD88C /* BasicSetting.swift */; };
 		D3AEEAC529F581BE00FF9A31 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AEEAC429F581BE00FF9A31 /* StartView.swift */; };
 		D3AEEAC829F58A3600FF9A31 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AEEAC729F58A3600FF9A31 /* UIFont+.swift */; };
 		D3AEEACA29F59CCA00FF9A31 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AEEAC929F59CCA00FF9A31 /* UIImage+.swift */; };
@@ -49,6 +55,12 @@
 		D36D320829E579C1003552E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36D320A29E579C1003552E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D36D321029E57ABD003552E8 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		D374B96F29F83505000FD88C /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		D374B97629F8F63C000FD88C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D374B97D29F93AB0000FD88C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D374B97F29F94D4D000FD88C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		D374B98129F94F02000FD88C /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		D374B98A29F992CD000FD88C /* BasicSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSetting.swift; sourceTree = "<group>"; };
 		D3AEEAC429F581BE00FF9A31 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		D3AEEAC729F58A3600FF9A31 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		D3AEEAC929F59CCA00FF9A31 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
@@ -85,6 +97,7 @@
 		D36D31F029E579C0003552E8 = {
 			isa = PBXGroup;
 			children = (
+				D374B97C29F939A5000FD88C /* SeminarWeek3_Assignment */,
 				D36D31FB29E579C0003552E8 /* SeminarWeek2_Assignment */,
 				D36D31FA29E579C0003552E8 /* Products */,
 			);
@@ -107,10 +120,23 @@
 				D36D320729E579C1003552E8 /* LaunchScreen.storyboard */,
 				D36D31FC29E579C0003552E8 /* AppDelegate.swift */,
 				D36D31FE29E579C0003552E8 /* SceneDelegate.swift */,
+				D374B96F29F83505000FD88C /* ProfileTableViewCell.swift */,
 				D36D320A29E579C1003552E8 /* Info.plist */,
 				D36D320529E579C1003552E8 /* Assets.xcassets */,
 			);
 			path = SeminarWeek2_Assignment;
+			sourceTree = "<group>";
+		};
+		D374B97C29F939A5000FD88C /* SeminarWeek3_Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				D374B97D29F93AB0000FD88C /* ProfileView.swift */,
+				D374B97629F8F63C000FD88C /* ProfileViewController.swift */,
+				D374B98A29F992CD000FD88C /* BasicSetting.swift */,
+				D374B97F29F94D4D000FD88C /* SettingTableViewCell.swift */,
+				D374B98129F94F02000FD88C /* SettingTableViewController.swift */,
+			);
+			path = SeminarWeek3_Assignment;
 			sourceTree = "<group>";
 		};
 		D3AEEAC229F5815F00FF9A31 /* View */ = {
@@ -237,8 +263,14 @@
 				D312735329E98DA400185CF5 /* UITextField+.swift in Sources */,
 				D3AEEAC529F581BE00FF9A31 /* StartView.swift in Sources */,
 				D346BD4629F3ABE300003FCC /* BaseViewController.swift in Sources */,
+				D374B97729F8F63C000FD88C /* ProfileViewController.swift in Sources */,
+				D374B98B29F992CD000FD88C /* BasicSetting.swift in Sources */,
 				D36D321129E57ABD003552E8 /* StartViewController.swift in Sources */,
 				D3E27FDE29EC1B2D00393250 /* NicknameViewController.swift in Sources */,
+				D374B98229F94F02000FD88C /* SettingTableViewController.swift in Sources */,
+				D374B97E29F93AB0000FD88C /* ProfileView.swift in Sources */,
+				D374B97029F83505000FD88C /* ProfileTableViewCell.swift in Sources */,
+				D374B98029F94D4D000FD88C /* SettingTableViewCell.swift in Sources */,
 				D36D31FD29E579C0003552E8 /* AppDelegate.swift in Sources */,
 				D3AEEAC829F58A3600FF9A31 /* UIFont+.swift in Sources */,
 				D36D31FF29E579C0003552E8 /* SceneDelegate.swift in Sources */,

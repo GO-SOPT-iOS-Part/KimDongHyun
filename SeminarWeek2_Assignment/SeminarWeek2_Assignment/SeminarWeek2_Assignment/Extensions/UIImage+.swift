@@ -14,5 +14,8 @@ extension UIImage {
         static let backButton = UIImage(named: "btn_before.svg")
         static let cancle = UIImage(named: "cancle.svg")
         static let textFieldClear = UIImage(named: "eye-slash.pdf")
+        static let profileImage = UIImage(named: "profileImage")
+        static let channelImage = UIImage(named: "channelImage")
+        static let nextImage = UIImage(named: "btn_next")
     }
 }

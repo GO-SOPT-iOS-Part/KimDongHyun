@@ -10,7 +10,7 @@ import SnapKit
 import Then
 
 
-class SettingTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
     
     static let identifier = "SettingTableViewCell"
     let titleLabel = UILabel()
@@ -18,12 +18,10 @@ class SettingTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-                setStyle()
-                setHierarchy()
-                setLayout()
+        setStyle()
+        setHierarchy()
+        setLayout()
     }
-    
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
@@ -31,8 +29,9 @@ class SettingTableViewCell: UITableViewCell {
     }
 }
 
-extension SettingTableViewCell {
+extension TableViewCell {
     func setStyle() {
+        backgroundColor = .tvingBlack
         selectionStyle = .none
         
         titleLabel.do {
@@ -59,8 +58,8 @@ extension SettingTableViewCell {
             $0.centerY.equalToSuperview()
         }
     }
-    func configureCell(_ setting: BasicSetting) {
-        titleLabel.text = setting.titleLabel
+    func configureCell(_ setting: String) {
+        titleLabel.text = setting
     }
 }
 

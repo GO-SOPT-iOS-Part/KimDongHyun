@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class ProfileView: UIView {
+final class ProfileTableHeaderView: UIView {
     
     let profileImage = UIImageView().then {
         $0.image = (UIImage.Image.profileImage)
@@ -116,17 +116,17 @@ final class ProfileView: UIView {
         background2.addSubviews(enjoyLabel,nextButton)
         
         profileImage.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(123)
+            $0.top.equalToSuperview().inset(20)
             $0.leading.equalToSuperview().offset(24)
             $0.height.width.equalTo(74)
         }
         nicknameLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(145)
+            $0.centerY.equalTo(profileImage)
             $0.leading.equalTo(profileImage.snp.trailing).offset(22)
         }
         
         profileChangeButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(140)
+            $0.centerY.equalTo(nicknameLabel)
             $0.trailing.equalToSuperview().inset(23)
         }
         background1.snp.makeConstraints {

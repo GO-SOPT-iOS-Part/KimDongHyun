@@ -13,7 +13,8 @@ import Then
 
 class ProfileViewController: UIViewController {
     
-    private let originView = ProfileView()
+    //MARK: - Properties
+    private let originView = ProfileTableHeaderView()
     override func loadView() {
         self.view = originView
         

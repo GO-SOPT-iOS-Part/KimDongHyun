@@ -35,6 +35,7 @@
 		D3BA006729E7E16000923DC4 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3BA006629E7E16000923DC4 /* Pretendard-Medium.otf */; };
 		D3BA006C29E8738600923DC4 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BA006B29E8738600923DC4 /* UIView+.swift */; };
 		D3C224EF29E6CA1900B4787D /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C224EE29E6CA1900B4787D /* HelloViewController.swift */; };
+		D3C41D9C29FD548F00971898 /* boundryLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C41D9B29FD548F00971898 /* boundryLineView.swift */; };
 		D3E27FDE29EC1B2D00393250 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E27FDD29EC1B2D00393250 /* NicknameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		D3BA006629E7E16000923DC4 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		D3BA006B29E8738600923DC4 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		D3C224EE29E6CA1900B4787D /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		D3C41D9B29FD548F00971898 /* boundryLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boundryLineView.swift; sourceTree = "<group>"; };
 		D3E27FDD29EC1B2D00393250 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D374B97D29F93AB0000FD88C /* TableHeaderView.swift */,
+				D3C41D9B29FD548F00971898 /* boundryLineView.swift */,
 				D37FA9C029FCC00A002663EC /* TableFooterView.swift */,
 				D374B97629F8F63C000FD88C /* TableHeaderViewController.swift */,
 				D374B97F29F94D4D000FD88C /* TableViewCell.swift */,
@@ -260,6 +263,7 @@
 				D346BD4429F3A85900003FCC /* HelloView.swift in Sources */,
 				D312735729E9924E00185CF5 /* String+.swift in Sources */,
 				D3C224EF29E6CA1900B4787D /* HelloViewController.swift in Sources */,
+				D3C41D9C29FD548F00971898 /* boundryLineView.swift in Sources */,
 				D312735329E98DA400185CF5 /* UITextField+.swift in Sources */,
 				D3AEEAC529F581BE00FF9A31 /* StartView.swift in Sources */,
 				D346BD4629F3ABE300003FCC /* BaseViewController.swift in Sources */,

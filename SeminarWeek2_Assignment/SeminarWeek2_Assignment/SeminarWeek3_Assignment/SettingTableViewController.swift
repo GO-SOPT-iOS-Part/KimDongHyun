@@ -17,12 +17,12 @@ class SettingTableViewController: BaseViewController {
     private var appSettingData: [String] = ["이용권","1:1 문의내역","예약알림","회원정보 수정","프로모션 정보 수신 동의"]
     private var userSettingData: [String] = ["공지사항","이벤트","고객센터","티빙알아보기"]
     
+    private let tableCellView = UITableView(frame: .zero, style: .plain)
+    
     private let headerView = TableHeaderView(frame: .init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300))
-
+    
     private let footerView = TableFooterView(frame: .init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100))
-    
-    private let tableCellView = UITableView()
-    
+    // 위 코드가 버튼 푸터를 의미함
     override func setLayout() {
         view.addSubviews(tableCellView)
         
@@ -38,7 +38,8 @@ class SettingTableViewController: BaseViewController {
         
         tableCellView.do {
             $0.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
-            $0.backgroundColor = .systemTeal
+            $0.register(boundryLineView.self, forHeaderFooterViewReuseIdentifier: "boundryLineView")
+            $0.backgroundColor = .tvingBlack
             $0.delegate = self
             $0.dataSource = self
             $0.tableHeaderView = headerView  // 테이블뷰에 헤더를 넣는다는 코드
@@ -47,14 +48,25 @@ class SettingTableViewController: BaseViewController {
     }
 }
 
+
 extension SettingTableViewController: UITableViewDelegate { }
 
 extension SettingTableViewController: UITableViewDataSource {
-    
+    // 섹션의 헤더 관련 코드를 넣고 여기서 분기처리 해주면 됨 -> 그 함수가 ViewforHeaderinsection
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let sectionHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "boundryLineView") as! boundryLineView
+        if section == 0  {
+            return sectionHeader
+        }
+        else {
+            return nil
+        }// 분기처리
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    
+
     
     //    두번째 섹션 구분 선
 //        func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -81,7 +93,7 @@ extension SettingTableViewController: UITableViewDataSource {
     //        return nil
     //    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-          return 0
+          return 30
       }
     
     func tableView(_ tableView:UITableView, numberOfRowsInSection section: Int) -> Int {

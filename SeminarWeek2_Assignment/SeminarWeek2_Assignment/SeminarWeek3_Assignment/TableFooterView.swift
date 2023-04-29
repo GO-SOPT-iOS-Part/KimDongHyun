@@ -39,7 +39,7 @@ final class TableFooterView: UIView {
     }
     private func setLayout() {
         self.addSubview(logoutButton)
-        logoutButton.snp_makeConstraints {
+        logoutButton.snp.makeConstraints {
             $0.top.equalToSuperview().inset(23)
             $0.leading.trailing.equalToSuperview().inset(8)
             $0.bottom.equalToSuperview().inset(22)

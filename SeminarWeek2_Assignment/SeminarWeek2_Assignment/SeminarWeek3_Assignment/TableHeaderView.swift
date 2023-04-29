@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class ProfileTableHeaderView: UIView {
+final class TableHeaderView: UIView {
     
     let profileImage = UIImageView().then {
         $0.image = (UIImage.Image.profileImage)

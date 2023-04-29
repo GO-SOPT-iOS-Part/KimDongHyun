@@ -11,10 +11,10 @@ import UIKit
 import SnapKit
 import Then
 
-class ProfileViewController: UIViewController {
+class TableHeaderViewController: UIViewController {
     
     //MARK: - Properties
-    private let originView = ProfileTableHeaderView()
+    private let originView = TableHeaderView()
     override func loadView() {
         self.view = originView
         

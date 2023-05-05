@@ -69,7 +69,7 @@ final class TableHeaderView: UIView {
     }
     
     let background1 = UIView().then {
-        $0.backgroundColor = .tivingGray5
+        $0.backgroundColor = .tvingGray5
         $0.layer.cornerRadius = 3
     }
     
@@ -94,7 +94,7 @@ final class TableHeaderView: UIView {
     }
     
     let background2 = UIView().then {
-        $0.backgroundColor = .tivingGray5
+        $0.backgroundColor = .tvingGray5
         $0.layer.cornerRadius = 3
     }
     override init(frame: CGRect) {

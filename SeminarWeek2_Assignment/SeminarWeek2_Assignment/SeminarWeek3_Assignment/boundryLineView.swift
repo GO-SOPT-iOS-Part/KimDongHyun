@@ -13,7 +13,7 @@ import Then
 final class boundryLineView: UITableViewHeaderFooterView {
     
     let boundryline = UIView().then {
-        $0.backgroundColor = UIColor(named: "tvingRed")
+        $0.backgroundColor = UIColor.tvingGray4
     }
     
     override init(reuseIdentifier: String?) {

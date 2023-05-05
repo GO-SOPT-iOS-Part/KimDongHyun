@@ -87,7 +87,7 @@ final class StartView: UIView {
     let idTextField: UITextField = {
         let textField = UITextField()
         textField.textColor = .tvingGray2
-        textField.backgroundColor = .tivingGray4
+        textField.backgroundColor = .tvingGray4
         textField.layer.cornerRadius = 3
         textField.font = .tvingSemiBold(ofSize: 15)
         textField.setLeftPadding(amount: 22)
@@ -104,7 +104,7 @@ final class StartView: UIView {
         textField.textContentType = .newPassword
         textField.isSecureTextEntry = true
         textField.textColor = .tvingGray2
-        textField.backgroundColor = .tivingGray4
+        textField.backgroundColor = .tvingGray4
         textField.layer.cornerRadius = 3
         textField.font = .tvingSemiBold(ofSize: 15)
         textField.setLeftPadding(amount: 22)
@@ -137,7 +137,7 @@ final class StartView: UIView {
         let label = UILabel()
         label.text = "|"
         label.textAlignment = .center
-        label.textColor = .tivingGray4
+        label.textColor = .tvingGray4
         return label
     }()
     

@@ -19,7 +19,7 @@ extension UIColor {
     class var tvingRed: UIColor {
         return UIColor(r: 255, g: 20, b: 60)
     }
-
+    
     class var tvingBlack: UIColor {
         return UIColor(r: 0, g: 0, b: 0)
     }
@@ -40,10 +40,11 @@ extension UIColor {
         return UIColor(r: 98, g: 98, b: 98)
     }
     
-    class var tivingGray4: UIColor {
+    class var tvingGray4: UIColor {
         return UIColor(r: 46, g: 46, b: 46)
     }
-
-
-      
+    
+    class var tvingGray5: UIColor {
+        return UIColor(r: 25, g: 25, b: 25)
+    }
 }

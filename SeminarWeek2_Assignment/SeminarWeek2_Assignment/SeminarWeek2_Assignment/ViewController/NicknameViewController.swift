@@ -22,7 +22,7 @@ final class NicknamViewController: BaseViewController {
     
     private let nicknameTextField: UITextField = {
         let textField = UITextField()
-        textField.textColor = .tivingGray4
+        textField.textColor = .tvingGray4
         textField.backgroundColor = .tvingGray2
         textField.layer.cornerRadius = 3
         textField.font = .tvingSemiBold(ofSize: 14)

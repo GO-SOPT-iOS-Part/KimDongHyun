@@ -17,5 +17,9 @@ extension UIImage {
         static let profileImage = UIImage(named: "profileImage")
         static let channelImage = UIImage(named: "channelImage")
         static let nextImage = UIImage(named: "btn_next")
+        static let good = UIImage(named: "good")
+        static let new = UIImage(named: "new")
+        static let forest = UIImage(named: "forest")
+        static let antifreeze = UIImage(named: "antifreeze")
     }
 }

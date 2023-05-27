@@ -11,11 +11,22 @@
 		D312735529E98E2D00185CF5 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312735429E98E2D00185CF5 /* UIButton+.swift */; };
 		D312735729E9924E00185CF5 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312735629E9924E00185CF5 /* String+.swift */; };
 		D312735929EA7CF300185CF5 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D312735829EA7CF300185CF5 /* UIColor+.swift */; };
+		D339381C2A061F200091B143 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D339381B2A061F200091B143 /* Alamofire */; };
+		D339381F2A0623EF0091B143 /* Config_File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339381E2A0623EF0091B143 /* Config_File.swift */; };
+		D33938212A0624200091B143 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33938202A0624200091B143 /* NetworkResult.swift */; };
+		D33938232A0628450091B143 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33938222A0628450091B143 /* SignUpResponse.swift */; };
+		D33938252A0628A80091B143 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33938242A0628A80091B143 /* SignUpService.swift */; };
+		D33938272A0628DF0091B143 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33938262A0628DF0091B143 /* SignUpViewController.swift */; };
 		D346BD4429F3A85900003FCC /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346BD4329F3A85900003FCC /* HelloView.swift */; };
 		D346BD4629F3ABE300003FCC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346BD4529F3ABE300003FCC /* BaseViewController.swift */; };
 		D34CB39929E58DF9004437A4 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34CB39829E58DF9004437A4 /* Pretendard-Bold.otf */; };
 		D34CB39B29E58E04004437A4 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34CB39A29E58E04004437A4 /* Pretendard-Regular.otf */; };
 		D34CB39D29E58E0E004437A4 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34CB39C29E58E0E004437A4 /* Pretendard-SemiBold.otf */; };
+		D35B72612A0D158700C068DF /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B72602A0D158700C068DF /* MusicViewController.swift */; };
+		D35B72652A0D18F800C068DF /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B72642A0D18F800C068DF /* MusicTableViewCell.swift */; };
+		D35B72692A0D444F00C068DF /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B72682A0D444F00C068DF /* Music.swift */; };
+		D35B726F2A0D655400C068DF /* MusicLoadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B726E2A0D655400C068DF /* MusicLoadService.swift */; };
+		D35B72712A0D669B00C068DF /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B72702A0D669B00C068DF /* MusicModel.swift */; };
 		D36D31FD29E579C0003552E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D31FC29E579C0003552E8 /* AppDelegate.swift */; };
 		D36D31FF29E579C0003552E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D31FE29E579C0003552E8 /* SceneDelegate.swift */; };
 		D36D320629E579C1003552E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36D320529E579C1003552E8 /* Assets.xcassets */; };
@@ -37,6 +48,7 @@
 		D3C224EF29E6CA1900B4787D /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C224EE29E6CA1900B4787D /* HelloViewController.swift */; };
 		D3C41D9C29FD548F00971898 /* boundryLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C41D9B29FD548F00971898 /* boundryLineView.swift */; };
 		D3E27FDE29EC1B2D00393250 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E27FDD29EC1B2D00393250 /* NicknameViewController.swift */; };
+		D3F5C3232A0E08670022F3DB /* ImageChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F5C3222A0E08670022F3DB /* ImageChangeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,11 +56,21 @@
 		D312735429E98E2D00185CF5 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		D312735629E9924E00185CF5 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		D312735829EA7CF300185CF5 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		D339381E2A0623EF0091B143 /* Config_File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config_File.swift; sourceTree = "<group>"; };
+		D33938202A0624200091B143 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		D33938222A0628450091B143 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		D33938242A0628A80091B143 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		D33938262A0628DF0091B143 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D346BD4329F3A85900003FCC /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		D346BD4529F3ABE300003FCC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D34CB39829E58DF9004437A4 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		D34CB39A29E58E04004437A4 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		D34CB39C29E58E0E004437A4 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		D35B72602A0D158700C068DF /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		D35B72642A0D18F800C068DF /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		D35B72682A0D444F00C068DF /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		D35B726E2A0D655400C068DF /* MusicLoadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLoadService.swift; sourceTree = "<group>"; };
+		D35B72702A0D669B00C068DF /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		D36D31F929E579C0003552E8 /* SeminarWeek2_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeminarWeek2_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36D31FC29E579C0003552E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36D31FE29E579C0003552E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +92,7 @@
 		D3C224EE29E6CA1900B4787D /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		D3C41D9B29FD548F00971898 /* boundryLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boundryLineView.swift; sourceTree = "<group>"; };
 		D3E27FDD29EC1B2D00393250 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		D3F5C3222A0E08670022F3DB /* ImageChangeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChangeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D339381C2A061F200091B143 /* Alamofire in Frameworks */,
 				D36D321429E57B23003552E8 /* SnapKit in Frameworks */,
 				D374B96329F68DFF000FD88C /* Then in Frameworks */,
 			);
@@ -85,6 +109,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D339381D2A0622F50091B143 /* SwminarWeek4 */ = {
+			isa = PBXGroup;
+			children = (
+				D33938202A0624200091B143 /* NetworkResult.swift */,
+				D339381E2A0623EF0091B143 /* Config_File.swift */,
+				D33938262A0628DF0091B143 /* SignUpViewController.swift */,
+				D33938222A0628450091B143 /* SignUpResponse.swift */,
+				D33938242A0628A80091B143 /* SignUpService.swift */,
+			);
+			path = SwminarWeek4;
+			sourceTree = "<group>";
+		};
 		D34CB39529E58DAC004437A4 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +132,24 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		D35B725F2A0D144F00C068DF /* SeminarWeek4_Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				D35B72602A0D158700C068DF /* MusicViewController.swift */,
+				D35B72642A0D18F800C068DF /* MusicTableViewCell.swift */,
+				D35B726E2A0D655400C068DF /* MusicLoadService.swift */,
+				D3F5C3222A0E08670022F3DB /* ImageChangeManager.swift */,
+				D35B72702A0D669B00C068DF /* MusicModel.swift */,
+				D35B72682A0D444F00C068DF /* Music.swift */,
+			);
+			path = SeminarWeek4_Assignment;
+			sourceTree = "<group>";
+		};
 		D36D31F029E579C0003552E8 = {
 			isa = PBXGroup;
 			children = (
+				D35B725F2A0D144F00C068DF /* SeminarWeek4_Assignment */,
+				D339381D2A0622F50091B143 /* SwminarWeek4 */,
 				D374B97C29F939A5000FD88C /* SeminarWeek3_Assignment */,
 				D36D31FB29E579C0003552E8 /* SeminarWeek2_Assignment */,
 				D3AEEAC629F587D300FF9A31 /* Extensions */,
@@ -119,12 +170,12 @@
 		D36D31FB29E579C0003552E8 /* SeminarWeek2_Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				D36D320A29E579C1003552E8 /* Info.plist */,
 				D3AEEAC229F5815F00FF9A31 /* View */,
 				D3AEEAC329F5816C00FF9A31 /* ViewController */,
 				D36D320729E579C1003552E8 /* LaunchScreen.storyboard */,
 				D36D31FC29E579C0003552E8 /* AppDelegate.swift */,
 				D374B96F29F83505000FD88C /* ProfileTableViewCell.swift */,
-				D36D320A29E579C1003552E8 /* Info.plist */,
 			);
 			path = SeminarWeek2_Assignment;
 			sourceTree = "<group>";
@@ -196,6 +247,7 @@
 			packageProductDependencies = (
 				D36D321329E57B23003552E8 /* SnapKit */,
 				D374B96229F68DFF000FD88C /* Then */,
+				D339381B2A061F200091B143 /* Alamofire */,
 			);
 			productName = SeminarWeek2_Assignment;
 			productReference = D36D31F929E579C0003552E8 /* SeminarWeek2_Assignment.app */;
@@ -228,6 +280,7 @@
 			packageReferences = (
 				D36D321229E57B23003552E8 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D374B96129F68DFF000FD88C /* XCRemoteSwiftPackageReference "Then" */,
+				D339381A2A061F200091B143 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D36D31FA29E579C0003552E8 /* Products */;
 			projectDirPath = "";
@@ -264,20 +317,31 @@
 				D312735729E9924E00185CF5 /* String+.swift in Sources */,
 				D3C224EF29E6CA1900B4787D /* HelloViewController.swift in Sources */,
 				D3C41D9C29FD548F00971898 /* boundryLineView.swift in Sources */,
+				D35B726F2A0D655400C068DF /* MusicLoadService.swift in Sources */,
 				D312735329E98DA400185CF5 /* UITextField+.swift in Sources */,
+				D33938272A0628DF0091B143 /* SignUpViewController.swift in Sources */,
 				D3AEEAC529F581BE00FF9A31 /* StartView.swift in Sources */,
+				D35B72612A0D158700C068DF /* MusicViewController.swift in Sources */,
 				D346BD4629F3ABE300003FCC /* BaseViewController.swift in Sources */,
 				D36D321129E57ABD003552E8 /* StartViewController.swift in Sources */,
+				D339381F2A0623EF0091B143 /* Config_File.swift in Sources */,
 				D3E27FDE29EC1B2D00393250 /* NicknameViewController.swift in Sources */,
+				D33938252A0628A80091B143 /* SignUpService.swift in Sources */,
 				D374B98229F94F02000FD88C /* SettingTableViewController.swift in Sources */,
+				D35B72692A0D444F00C068DF /* Music.swift in Sources */,
 				D374B97E29F93AB0000FD88C /* TableHeaderView.swift in Sources */,
+				D3F5C3232A0E08670022F3DB /* ImageChangeManager.swift in Sources */,
+				D35B72712A0D669B00C068DF /* MusicModel.swift in Sources */,
+				D33938232A0628450091B143 /* SignUpResponse.swift in Sources */,
 				D374B97029F83505000FD88C /* ProfileTableViewCell.swift in Sources */,
 				D374B98029F94D4D000FD88C /* TableViewCell.swift in Sources */,
+				D33938212A0624200091B143 /* NetworkResult.swift in Sources */,
 				D36D31FD29E579C0003552E8 /* AppDelegate.swift in Sources */,
 				D37FA9C129FCC00A002663EC /* TableFooterView.swift in Sources */,
 				D3AEEAC829F58A3600FF9A31 /* UIFont+.swift in Sources */,
 				D36D31FF29E579C0003552E8 /* SceneDelegate.swift in Sources */,
 				D388FBA12A01822B00C66E4C /* NavigationView.swift in Sources */,
+				D35B72652A0D18F800C068DF /* MusicTableViewCell.swift in Sources */,
 				D3AEEACA29F59CCA00FF9A31 /* UIImage+.swift in Sources */,
 				D312735529E98E2D00185CF5 /* UIButton+.swift in Sources */,
 				D312735929EA7CF300185CF5 /* UIColor+.swift in Sources */,
@@ -417,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://raw.githubusercontent.com/KoreanThinker/billboard-json/main/billboard-hot-100/recent.json";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -444,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://raw.githubusercontent.com/KoreanThinker/billboard-json/main/billboard-hot-100/recent.json";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -490,6 +556,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D339381A2A061F200091B143 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D36D321229E57B23003552E8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -509,6 +583,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D339381B2A061F200091B143 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D339381A2A061F200091B143 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		D36D321329E57B23003552E8 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D36D321229E57B23003552E8 /* XCRemoteSwiftPackageReference "SnapKit" */;
